@@ -1,6 +1,4 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import spotifyLogo from "./assets/spotify.svg";
 import youtubeLogo from "./assets/youtube.svg";
 import arrow from "./assets/arrow.svg";
@@ -26,19 +24,23 @@ function App() {
       <div>
         <form>
           <p>Please paste a link to your playlist</p>
-          <div>
-            <input type="Email" autoComplete="on" required name="user" />
-          </div>
+          <input
+            type="text"
+            placeholder="Enter your Spotify playlist URL"
+            autoComplete="off"
+            required
+            name="playlist-url"
+          />
           <div className="card">
             <button onClick={() => setCount((count) => count + 1)}>
-              count is {count}
+              Convert
             </button>
           </div>
         </form>
       </div>
-      <div className="footer">
-      <p>stuff inside</p>
-    </div>
+      <div className="card">
+        <h2>{count}</h2>
+      </div>
     </>
   );
 }

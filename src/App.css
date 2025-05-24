@@ -94,6 +94,28 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+input {
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 2px solid #1DB954; /* Spotify green color */
+  border-radius: 25px;
+  background-color: white;
+  color: #333;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: #1ed760; /* Brighter Spotify green for focus state */
+  box-shadow: 0 0 8px rgba(29, 185, 84, 0.3);
+}
+
+input::placeholder {
+  color: #888;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -104,5 +126,19 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 4em;
+    padding: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 3em;
+    padding: 0.8em;
   }
 }
